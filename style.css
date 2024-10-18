@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: hsl(30, 54%, 90%);
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 736px;
+    height: 1700px;
+    border-radius: 24px;
+    margin: 128px 352px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+img{
+    height: 300px;
+    width: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 40px;
+}
+
+h1{
+    font-family: "Young Serif", serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2{
+    color: hsl(14, 45%, 36%);
+    font-family: "Young Serif", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h3{
+    color: hsl(332, 51%, 32%);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+p{
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+}
+
+.preparation{
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.preparation ul{
+    margin-top: 16px;
+}
+
+header, section{
+    margin: 0 40px; 
+}
+
+header, .preparation{
+    margin-bottom: 32px;
+}
+
+
+.line{
+    width: 656px;
+    height: 1px;
+    background-color: hsl(30, 18%, 87%);
+    margin: 32px 40px;
+}
+
+p, ol, ul, table{
+    margin-top: 24px;
+}
+
+ul li {
+    padding-left: 16px;
+}
+
+li{
+    margin-bottom: 8px;
+}
+
+li::marker{
+    color: hsl(14, 45%, 36%);
+}
+
+table {  
+    width: 656px;
+    height: 168px;
+    text-align: left;
+}
+
+th{
+    font-weight: normal;
+}
+
+td{
+    color: hsl(332, 51%, 32%);
+    font-family: "Outfit", sans-serif;
+    font-weight: 800;
+}
+
+/*border for the cells*/
+th, td{
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+/*removes the border from bottom of the row*/
+tr:last-child td, tr:last-child th{
+    border-bottom: none; 
+  }
+
+  @media (max-width: 600px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw; /* Full width of the viewport */
+        height: auto; /* Adjust height automatically */
+        border-radius: 0;
+        margin: 0;
+        padding-left: 32px; /* Left padding for mobile */
+        padding-right: 32px; /* Right padding for mobile */
+    }
+
+    /* Image adjustments for mobile */
+    img {
+        margin: 0;
+        width: 100vw; /* Full viewport width */
+        object-fit: cover; /* Ensures the image covers its container */
+        height: auto; /* Keep aspect ratio intact */
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+    }
+
+    /* Line (divider) adjustments for mobile */
+    .line {
+        width: calc(100vw - 64px); /* Adjust width based on padding (100% minus padding) */
+        margin: 32px 0; /* Add vertical margin */
+    }
+
+    /* Table adjustments for mobile */
+    table {
+        width: calc(100vw - 64px); /* Ensure the table fits within the mobile screen */
+    }
+
+    /* General section and header adjustments */
+    header, section {
+        margin: 0; /* Reset margin to zero for mobile */
+    }
+}
+
+
+  
